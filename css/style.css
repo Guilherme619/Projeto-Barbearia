@@ -1,3 +1,6 @@
+
+/*ARQUIVO CSS DO PROJETO*
+
 body {
     font-family: 'Rajdhani', sans-serif;
 }
@@ -62,8 +65,8 @@ main {
     font-weight: bold;
 }
 #servicos {
-    background-image: url(/img/beneficios.jpg)
-    padding: 20px
+    background-image: url(/img/beneficios.jpg);
+    padding: 20px;
 }
 
 #servicos .itens {
@@ -149,10 +152,156 @@ footer .container {
 
 footer .midias a {
     text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
 }
+
+footer .midias a:hover {
+    transform: translateY(-15px);
+} 
+
+
 footer .midias img {
     width: 50px;
 }
+
+/*=========== PRODUTO ========== */
+
+.produtos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.produtos .produto{
+    width: 250 px;
+    border: 2px solid rgb(25, 163, 163);
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.produtos .produto:hover{
+    background-color: rgb(25, 163, 163);
+    font-weight: bold;
+    border-color: rosybrown;
+    cursor: pointer;
+}
+
+.produtos .produto:active {
+    border-color:rgb(180, 102, 13);
+}
+
+.produtos .produto img:hover {
+    transition: .9s;
+    transform: scale(1.0)  translate(-5px);
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main form input {
+    width: 300px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid rgb(69, 241, 35); 
+}
+main form input:focus {
+    outline: none;
+    border:dashed rgb(109, 13, 109)
+}
+main form label {
+    margin-top: 15px;
+}
+main form textarea {
+    width: 300px;
+    border-radius: 5px;
+    border: 2px solid rgb(148, 15, 108)
+}
+main form button {
+    width: 300px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(165, 231, 10);
+    background-color:rgb(165, 192, 13);
+    color:rgb(25, 163, 163);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+main form button:hover {
+    color:black;
+    background-color: rgb(19, 192, 204);
+    box-shadow: 5px 3px 20px rgb(216, 65, 5);
+
+}
+main {
+    margin-top:20px;
+}
+
+.imgname {
+    height: 300px;
+    background-image: url(/img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 45px;
+    border-radius: 5px;
+    background-color: rgb(84, 6, 230);
+    padding: 15px;
+
+}
+
+
+
+@media (max-width:768px) {
+    .textos{
+        width: unset;
+    }
+}
+    .produtos {
+        flex-wrap: wrap;
+        aligtn-content: center;
+
+    }
+
+@media (max-width:540px) {
+    nav {
+        flex-direction: column;
+        width: unset;
+        text-align: center;
+
+    }
+
+    nav a {
+        margin-bottom: 10px;
+    }
+
+    #servicos .itens {
+        width: unset;
+    }
+
+    #video iframe {
+        width: 100%;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+    
+    footer .midias {
+        padding-bottom: 25px;
+    }
+}
+
+
 
 
 

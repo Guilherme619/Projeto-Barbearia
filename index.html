@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,9 +39,9 @@
 
 <nav>
      <ul>
-         <li><a href="https://" target="_blank" rel="noopeneer noreferrer">Home</a></li>
-         <li><a href="https://" target="_blank" rel="noopeneer noreferrer">Produtos</a></li>
-         <li><a href="https://" target="_blank" rel="noopeneer noreferrer">Contato</a></li>
+         <li><a href="index.html" target="_blank" rel="noopeneer noreferrer">Home</a></li>
+         <li><a href="produtos.html" target="_blank" rel="noopeneer noreferrer">Produtos</a></li>
+         <li><a href="contatos.html" target="_blank" rel="noopeneer noreferrer">Contato</a></li>
 
      </ul>   
 
@@ -48,7 +49,10 @@
 
 <main>
     <section>
-        <img id="imgtopo" src="img/banner.jpg" alt="">
+        <div class="imgname">
+            <h2>Olá...</h2>
+
+        </div>
         <div class="textos">
         
             <p class="titulo">Sobre a Barbearia Contoso</p>
@@ -142,6 +146,19 @@
         </div>
     </div>
  </footer>
+ <script>
+     const h2 = document.querySelecton("h2")
+
+     h2.onclick = function () {
+         const userName = prompt("Qual é seu nome?");
+
+         h2.textContent = `Olá... ${userName}Seja Bem-vindo!`
+         
+         if(!userName) {
+             h2.textContent = `Olá...Visitante Seja Bem-vindo!`
+         }
+     }
+ </script>
 
 </body>
 </html>
